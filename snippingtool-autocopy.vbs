@@ -26,6 +26,17 @@ currentDateTime = Replace(currentDateTime, ":", "")
 ' One high res and one low res
 Dim imgArr(1)
 
+
+' Clear Folder Initially
+Set folder = fso.GetFolder(SourceDir)
+Set files = folder.Files
+
+' Empty the source dir
+For Each file in files
+    file.Delete(True)
+Next
+
+
 ' Main loop
 Do While True
     ' Check for files in the source directory
@@ -42,7 +53,8 @@ Do While True
     For Each file In files
         If Left(file.Name, 1) = "{" AND Right(file.Name, 3) = "png" Then
             ' Add image file to loop
-            Set imgArr(img) = file
+            Set imgArr(imgCounter) = file
+
             ' Increment counter
             imgCounter = imgCounter + 1
         End If
@@ -74,5 +86,5 @@ Do While True
     End If
 
     ' Wait for a bit before checking again
-    WScript.Sleep 500 ' 10 seconds
+    WScript.Sleep 500 ' 500ms
 Loop
