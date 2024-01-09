@@ -1,4 +1,4 @@
-' Visual Basic Script for automatically saving screenshots took by the Window's Snipping Tool
+' Visual Basic Script for automatically saving screenshots taken by the Window's Snipping Tool
 ' v0.1
 '
 ' By Matia Choi
