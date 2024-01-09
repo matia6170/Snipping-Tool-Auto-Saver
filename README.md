@@ -6,6 +6,8 @@ This Script will add that missing feature to Windows 10.
 
 ## Instructions
 1. Download the script file.
-2. Press Win + R and run shell:startup
-3. Copy the script file.
-4. The script should run every time the computer starts up.
+2. Modify the source directory accordingly.
+3. Press Win + R and run shell:startup.
+4. Copy the script file.
+5. The script should run every time the computer starts up.
+
